@@ -107,7 +107,7 @@ public class RpcRequest implements Serializable {
 
 - `transient` 只能修饰变量，不能修饰类和方法。
 - `transient` 修饰的变量，在反序列化后变量值将会被置成类型的默认值。例如，如果是修饰 `int` 类型，那么反序列后结果就是 `0`。
-- `static` 变量因为不属于任何对象(Object)，所以无论有没有 `transient` 关键字修饰，均不会被序列化。
+- <mark>`static` 变量因为不属于任何对象(Object)，所以无论有没有 `transient` 关键字修饰，均不会被序列化。</mark>
 
 **为什么不推荐使用 JDK 自带的序列化？**
 

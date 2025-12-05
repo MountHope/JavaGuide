@@ -44,7 +44,7 @@ System.out.println(a == b);// false
 
 通常情况下，大部分需要小数精确运算结果的业务场景（比如涉及到钱的场景）都是通过 `BigDecimal` 来做的。
 
-《阿里巴巴 Java 开发手册》中提到：**浮点数之间的等值判断，基本数据类型不能用 == 来比较，包装数据类型不能用 equals 来判断。**
+《阿里巴巴 Java 开发手册》中提到：<mark>**浮点数之间的等值判断，基本数据类型不能用 == 来比较，包装数据类型不能用 equals 来判断。**</mark>
 
 ![](https://oss.javaguide.cn/javaguide/image-20211213101646884.png)
 
@@ -67,7 +67,7 @@ System.out.println(x.compareTo(y));// 0
 
 ### 创建
 
-我们在使用 `BigDecimal` 时，为了防止精度丢失，推荐使用它的`BigDecimal(String val)`构造方法或者 `BigDecimal.valueOf(double val)` 静态方法来创建对象。
+我们在使用 `BigDecimal` 时，为了防止精度丢失，<mark>推荐使用它的`BigDecimal(String val)`构造方法或者 `BigDecimal.valueOf(double val)` 静态方法来创建对象。</mark>
 
 《阿里巴巴 Java 开发手册》对这部分内容也有提到，如下图所示。
 

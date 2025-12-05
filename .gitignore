@@ -16,3 +16,6 @@ format-markdown.py
 .npmrc
 package-lock.json
 lintmd-config.json
+
+.idea
+.gitignore

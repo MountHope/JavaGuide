@@ -24,7 +24,7 @@ head:
 
 在 Java 中，所有的异常都有一个共同的祖先 `java.lang` 包中的 `Throwable` 类。`Throwable` 类有两个重要的子类:
 
-- **`Exception`** :程序本身可以处理的异常，可以通过 `catch` 来进行捕获。`Exception` 又可以分为 Checked Exception (受检查异常，必须处理) 和 Unchecked Exception (不受检查异常，可以不处理)。
+- <mark>**`Exception`** :程序本身可以处理的异常，可以通过 `catch` 来进行捕获。`Exception` 又可以分为 Checked Exception (受检查异常，必须处理) 和 Unchecked Exception (不受检查异常，可以不处理)。</mark>
 - **`Error`**：`Error` 属于程序无法处理的错误 ，~~我们没办法通过 `catch` 来进行捕获~~不建议通过`catch`捕获 。例如 Java 虚拟机运行错误（`Virtual MachineError`）、虚拟机内存不够错误(`OutOfMemoryError`)、类定义错误（`NoClassDefFoundError`）等 。这些异常发生时，Java 虚拟机（JVM）一般会选择线程终止。
 
 ### ⭐️Checked Exception 和 Unchecked Exception 有什么区别？
@@ -176,7 +176,7 @@ try {
 }
 ```
 
-使用 Java 7 之后的 `try-with-resources` 语句改造上面的代码:
+<mark>使用 Java 7 之后的 `try-with-resources` 语句改造上面的代码:</mark>
 
 ```java
 try (Scanner scanner = new Scanner(new File("test.txt"))) {
@@ -229,7 +229,7 @@ ArrayList<E> extends AbstractList<E>
 
 ### 泛型的使用方式有哪几种？
 
-泛型一般有三种使用方式:**泛型类**、**泛型接口**、**泛型方法**。
+<mark>泛型一般有三种使用方式:**泛型类**、**泛型接口**、**泛型方法**。</mark>
 
 **1.泛型类**：
 
@@ -459,8 +459,8 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 简单来说：
 
-- **序列化**：将数据结构或对象转换成可以存储或传输的形式，通常是二进制字节流，也可以是 JSON, XML 等文本格式
-- **反序列化**：将在序列化过程中所生成的数据转换为原始数据结构或者对象的过程
+- <mark>**序列化**：将数据结构或对象转换成可以存储或传输的形式，通常是二进制字节流，也可以是 JSON, XML 等文本格式</mark>
+- <mark>**反序列化**：将在序列化过程中所生成的数据转换为原始数据结构或者对象的过程</mark>
 
 对于 Java 这种面向对象编程语言来说，我们序列化的都是对象（Object）也就是实例化后的类(Class)，但是在 C++这种半面向对象的语言中，struct(结构体)定义的是数据结构类型，而 class 对应的是对象类型。
 
@@ -510,9 +510,9 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 ### 常见序列化协议有哪些？
 
-JDK 自带的序列化方式一般不会用 ，因为序列化效率低并且存在安全问题。比较常用的序列化协议有 Hessian、Kryo、Protobuf、ProtoStuff，这些都是基于二进制的序列化协议。
+<mark>JDK 自带的序列化方式一般不会用 ，因为序列化效率低并且存在安全问题。比较常用的序列化协议有 Hessian、Kryo、Protobuf、ProtoStuff，这些都是基于二进制的序列化协议。</mark>
 
-像 JSON 和 XML 这种属于文本类序列化方式。虽然可读性比较好，但是性能较差，一般不会选择。
+<mark>像 JSON 和 XML 这种属于文本类序列化方式。虽然可读性比较好，但是性能较差，一般不会选择。</mark>
 
 ### 为什么不推荐使用 JDK 自带的序列化？
 
@@ -536,8 +536,8 @@ IO 即 `Input/Output`，输入和输出。数据输入到计算机内存的过�
 
 Java IO 流的 40 多个类都是从如下 4 个抽象类基类中派生出来的。
 
-- `InputStream`/`Reader`: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。
-- `OutputStream`/`Writer`: 所有输出流的基类，前者是字节输出流，后者是字符输出流。
+- <mark>`InputStream`/`Reader`: 所有的输入流的基类，前者是字节输入流，后者是字符输入流。</mark>
+- <mark>`OutputStream`/`Writer`: 所有输出流的基类，前者是字节输出流，后者是字符输出流。</mark>
 
 ### I/O 流为什么要分为字节流和字符流呢?
 

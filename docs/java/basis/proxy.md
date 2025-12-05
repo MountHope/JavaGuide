@@ -101,7 +101,7 @@ after method send()
 
 相比于静态代理来说，动态代理更加灵活。我们不需要针对每个目标类都单独创建一个代理类，并且也不需要我们必须实现接口，我们可以直接代理实现类( CGLIB 动态代理机制)。
 
-**从 JVM 角度来说，动态代理是在运行时动态生成类字节码，并加载到 JVM 中的。**
+<mark>**从 JVM 角度来说，动态代理是在运行时动态生成类字节码，并加载到 JVM 中的。**</mark>
 
 说到动态代理，Spring AOP、RPC 框架应该是两个不得不提的，它们的实现都依赖了动态代理。
 
@@ -401,4 +401,4 @@ after method send
 
 文中涉及到的所有源码，你可以在这里找到：[https://github.com/Snailclimb/guide-rpc-framework-learning/tree/master/src/main/java/github/javaguide/proxy](https://github.com/Snailclimb/guide-rpc-framework-learning/tree/master/src/main/java/github/javaguide/proxy) 。
 
-<!-- @include: @article-footer.snippet.md -->
+<!-- @include: @article-footer.snippet.md --> 
